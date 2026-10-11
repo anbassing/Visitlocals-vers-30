@@ -111,7 +111,88 @@
       }
     }
   }
-}</script></head><body class="bg-background font-body-lg text-body-lg text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1440px] mx-auto px-margin lg:px-margin-md flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="group flex flex-col" data-path="home" href="#"><span class="font-display-lg text-body-lg tracking-wider text-primary group-hover:text-primary-container transition-colors uppercase font-medium">VISIT LOCALS</span><span class="font-label-md text-label-md tracking-widest uppercase text-tertiary">Gateway to Indonesia</span></a><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg px-space-xs py-space-xs shadow-sm"><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase tracking-wider px-space-xs py-space-xs transition-colors" data-path="home" href="#">Home</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase tracking-wider px-space-xs py-space-xs transition-colors" data-path="explore" href="#">Explore</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase tracking-wider px-space-xs py-space-xs transition-colors" data-path="business" href="#">Business</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase tracking-wider px-space-xs py-space-xs transition-colors" data-path="experience" href="#">Experience</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase tracking-wider px-space-xs py-space-xs transition-colors" data-path="insight" href="#">Insight</a><a aria-current="page" class="uppercase tracking-wider transition-colors bg-primary-container text-on-primary font-bold rounded-lg px-space-xs py-space-xs shadow-sm" data-path="partner-with-us" href="#">Partner with Us</a></nav></div><div class="flex items-center gap-space-md"><button class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-label-md text-label-md">Search</span><kbd class="font-label-md text-label-md px-space-xs bg-surface-container-highest rounded text-on-surface">⌘K</kbd></button><div class="flex items-center rounded-lg bg-surface-container-high p-0.5"><button class="px-space-xs py-0.5 rounded font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors" type="button">ID</button><span class="text-outline-variant font-label-md text-label-md">/</span><button class="px-space-xs py-0.5 rounded font-label-md text-label-md uppercase bg-surface-container-lowest text-primary shadow-xs font-semibold" type="button">EN</button></div><a class="hidden md:inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider px-space-md py-space-xs rounded-lg hover:bg-primary transition-all duration-300" data-path="plan-my-trip" href="#">Plan My Trip</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+}</script>
+<style id="visit-locals-partner-revision-v29">
+/* V29 — Partner Spectrum + Registration layout fixes */
+
+/* Spectrum of Collaboration: animate the main content panel and each inner offering card */
+.vl-spectrum-main-box {
+  position: relative;
+  transition: transform .35s ease, box-shadow .35s ease, background-color .35s ease;
+  border-radius: 20px;
+}
+.vl-spectrum-main-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(5, 0, 64, .08);
+}
+.vl-spectrum-card {
+  position: relative;
+  transition: transform .28s ease, box-shadow .28s ease, background-color .28s ease, border-color .28s ease;
+  will-change: transform;
+  border: 1px solid transparent;
+}
+.vl-spectrum-card:hover {
+  transform: translateY(-7px) scale(1.015);
+  box-shadow: 0 16px 34px rgba(5, 0, 64, .12);
+  background-color: #fff9e8;
+  border-color: rgba(26,108,57,.16);
+}
+.vl-spectrum-card .material-symbols-outlined {
+  transition: transform .28s ease;
+}
+.vl-spectrum-card:hover .material-symbols-outlined {
+  transform: scale(1.12) rotate(-3deg);
+}
+
+/* Partner Registration: desktop = LEFT editorial / RIGHT form */
+#partner-application .vl-partner-registration-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr) !important;
+  gap: 48px !important;
+  align-items: start !important;
+}
+#partner-application .vl-partner-registration-info {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+#partner-application .vl-partner-registration-form-column {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  align-self: start !important;
+}
+#partner-application .vl-partner-registration-form-column > div {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Only the three small reassurance boxes animate */
+#partner-application .vl-registration-reassurance {
+  transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+  will-change: transform;
+}
+#partner-application .vl-registration-reassurance:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(5, 0, 64, .11);
+  background-color: #fffdf3;
+}
+
+@media (max-width: 1023px) {
+  #partner-application .vl-partner-registration-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  #partner-application .vl-partner-registration-info,
+  #partner-application .vl-partner-registration-form-column {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+  }
+}
+</style>
+</head><body class="bg-background font-body-lg text-body-lg text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1440px] mx-auto px-margin lg:px-margin-md flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="group flex flex-col" data-path="home" href="#"><span class="font-display-lg text-body-lg tracking-wider text-primary group-hover:text-primary-container transition-colors uppercase font-medium">VISIT LOCALS</span><span class="font-label-md text-label-md tracking-widest uppercase text-tertiary">Gateway to Indonesia</span></a><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg px-space-xs py-space-xs shadow-sm"><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase tracking-wider px-space-xs py-space-xs transition-colors" data-path="home" href="#">Home</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase tracking-wider px-space-xs py-space-xs transition-colors" data-path="explore" href="#">Explore</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase tracking-wider px-space-xs py-space-xs transition-colors" data-path="business" href="/business/">Business</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase tracking-wider px-space-xs py-space-xs transition-colors" data-path="experience" href="#">Experience</a><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase tracking-wider px-space-xs py-space-xs transition-colors" data-path="insight" href="#">Insight</a><a aria-current="page" class="uppercase tracking-wider transition-colors bg-primary-container text-on-primary font-bold rounded-lg px-space-xs py-space-xs shadow-sm" data-path="partner-with-us" href="#">Partner with Us</a></nav></div><div class="flex items-center gap-space-md"><button class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-label-md text-label-md">Search</span><kbd class="font-label-md text-label-md px-space-xs bg-surface-container-highest rounded text-on-surface">⌘K</kbd></button><div class="flex items-center rounded-lg bg-surface-container-high p-0.5"><button class="px-space-xs py-0.5 rounded font-label-md text-label-md uppercase text-on-surface-variant hover:text-on-surface transition-colors" type="button">ID</button><span class="text-outline-variant font-label-md text-label-md">/</span><button class="px-space-xs py-0.5 rounded font-label-md text-label-md uppercase bg-surface-container-lowest text-primary shadow-xs font-semibold" type="button">EN</button></div><a class="hidden md:inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider px-space-md py-space-xs rounded-lg hover:bg-primary transition-all duration-300" data-path="plan-my-trip" href="#">Plan My Trip</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
 <!-- 1. HERO SECTION -->
 <section class="relative w-full overflow-hidden bg-surface pt-space-md pb-space-xl">
 <!-- Atmospheric Ambient Gradient -->
@@ -721,7 +802,7 @@
 <section class="w-full bg-surface py-space-xl">
 <div class="max-w-[1440px] mx-auto px-margin lg:px-margin-md">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
-<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<div class="lg:col-span-5 flex flex-col gap-space-sm vl-spectrum-main-box">
 <span class="font-label-md text-label-md uppercase tracking-widest text-tertiary">Spectrum of Collaboration</span>
 <h2 class="font-display-lg text-display-lg text-primary">
             Bring Your Local Knowledge <span class="italic text-tertiary">to Life.</span>
@@ -737,7 +818,7 @@
 </div>
 </div>
 <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-gutter">
-<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-sm shadow-xs">
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-sm shadow-xs vl-spectrum-card">
 <div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-primary shrink-0">
 <span class="material-symbols-outlined text-[20px]">explore</span>
 </div>
@@ -746,7 +827,7 @@
 <p class="font-body-lg text-label-md text-on-surface-variant mt-1">Multi-day or half-day private access led exclusively by native experts.</p>
 </div>
 </div>
-<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-sm shadow-xs">
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-sm shadow-xs vl-spectrum-card">
 <div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-secondary shrink-0">
 <span class="material-symbols-outlined text-[20px]">villa</span>
 </div>
@@ -755,7 +836,7 @@
 <p class="font-body-lg text-label-md text-on-surface-variant mt-1">Exclusive bookings for private eco-estates, islands, and architectural homes.</p>
 </div>
 </div>
-<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-sm shadow-xs">
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-sm shadow-xs vl-spectrum-card">
 <div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-tertiary shrink-0">
 <span class="material-symbols-outlined text-[20px]">hub</span>
 </div>
@@ -764,7 +845,7 @@
 <p class="font-body-lg text-label-md text-on-surface-variant mt-1">Connecting trade delegations directly with licensed factory heads and local operators.</p>
 </div>
 </div>
-<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-sm shadow-xs">
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-sm shadow-xs vl-spectrum-card">
 <div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-primary shrink-0">
 <span class="material-symbols-outlined text-[20px]">psychology</span>
 </div>
@@ -773,7 +854,7 @@
 <p class="font-body-lg text-label-md text-on-surface-variant mt-1">Providing institutional clients with verified on-the-ground market context.</p>
 </div>
 </div>
-<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-sm shadow-xs">
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-sm shadow-xs vl-spectrum-card">
 <div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-secondary shrink-0">
 <span class="material-symbols-outlined text-[20px]">inventory_2</span>
 </div>
@@ -782,7 +863,7 @@
 <p class="font-body-lg text-label-md text-on-surface-variant mt-1">Wholesale supply lines for specialty coffee, wild spices, cacao, and custom furniture.</p>
 </div>
 </div>
-<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-sm shadow-xs">
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-sm shadow-xs vl-spectrum-card">
 <div class="w-10 h-10 rounded-lg bg-surface flex items-center justify-center text-tertiary shrink-0">
 <span class="material-symbols-outlined text-[20px]">shield</span>
 </div>
@@ -881,9 +962,9 @@
 <!-- 10. PARTNER APPLICATION FORM ('Let’s Work Together.') -->
 <section class="w-full bg-surface-container py-space-xl" id="partner-application">
 <div class="max-w-[1440px] mx-auto px-margin lg:px-margin-md">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg vl-partner-registration-grid">
 <!-- Editorial Left Column -->
-<div class="lg:col-span-5 flex flex-col justify-between">
+<div class="lg:col-span-5 flex flex-col justify-between vl-partner-registration-info">
 <div class="flex flex-col gap-space-sm">
 <span class="font-label-md text-label-md uppercase tracking-widest text-tertiary">Partner Registration</span>
 <h2 class="font-display-lg text-display-lg text-primary">
@@ -893,21 +974,21 @@
               Tell us about your work, your estate, or your service. There are zero listing fees or computational gatekeeping. Our in-country bilingual team will review your application and reach out directly within 48 hours.
             </p>
 <div class="flex flex-col gap-space-xs mt-space-sm">
-<div class="flex items-start gap-3 bg-surface p-space-sm rounded-lg shadow-xs">
+<div class="flex items-start gap-3 bg-surface p-space-sm rounded-lg shadow-xs vl-registration-reassurance">
 <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">lock</span>
 <div>
 <h5 class="font-label-md text-label-md uppercase tracking-wider text-primary">Confidentiality Assured</h5>
 <p class="font-body-lg text-label-md text-on-surface-variant">Your proprietary contact details are never exposed to public scraping.</p>
 </div>
 </div>
-<div class="flex items-start gap-3 bg-surface p-space-sm rounded-lg shadow-xs">
+<div class="flex items-start gap-3 bg-surface p-space-sm rounded-lg shadow-xs vl-registration-reassurance">
 <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">support_agent</span>
 <div>
 <h5 class="font-label-md text-label-md uppercase tracking-wider text-primary">Direct WhatsApp Response</h5>
 <p class="font-body-lg text-label-md text-on-surface-variant">Human-led dialogue via WhatsApp or private email.</p>
 </div>
 </div>
-<div class="flex items-start gap-3 bg-surface p-space-sm rounded-lg shadow-xs">
+<div class="flex items-start gap-3 bg-surface p-space-sm rounded-lg shadow-xs vl-registration-reassurance">
 <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">price_check</span>
 <div>
 <h5 class="font-label-md text-label-md uppercase tracking-wider text-primary">Zero Listing Fees</h5>
@@ -916,19 +997,8 @@
 </div>
 </div>
 </div>
-<!-- Small Provenance Seal -->
-<div class="hidden lg:flex items-center gap-space-sm pt-space-lg">
-<div class="w-12 h-12 rounded-full bg-surface flex items-center justify-center text-primary shadow-xs">
-<span class="material-symbols-outlined text-[24px]">verified</span>
-</div>
-<div>
-<span class="font-label-md text-label-md uppercase tracking-widest text-primary block font-semibold">Republik Indonesia</span>
-<span class="font-body-lg text-label-md text-on-surface-variant">Ministry of Tourism &amp; Creative Economy Partner Ecosystem</span>
-</div>
-</div>
-</div>
 <!-- Right Column: Interactive Form -->
-<div class="lg:col-span-7">
+<div class="lg:col-span-7 vl-partner-registration-form-column">
 <div class="bg-surface rounded-2xl p-space-md sm:p-space-lg shadow-md">
 <form class="flex flex-col gap-space-md" id="partner-form" onsubmit="event.preventDefault(); submitPartnerForm();">
 <!-- Name & Business Name -->
